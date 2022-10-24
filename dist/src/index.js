@@ -1,5 +1,5 @@
 import { KadDHT as SingleKadDHT } from './kad-dht.js';
-import { DualKadDHT } from './dual-kad-dht';
+import { DualKadDHT } from './dual-kad-dht.js';
 export class KadDHT extends DualKadDHT {
     constructor(init) {
         super(new SingleKadDHT({
@@ -9,7 +9,6 @@ export class KadDHT extends DualKadDHT {
         }), new SingleKadDHT({
             protocolPrefix: '/ipfs',
             ...init,
-            clientMode: false,
             lan: true
         }));
     }

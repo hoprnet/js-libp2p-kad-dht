@@ -1,4 +1,4 @@
-import { DualKadDHT } from './dual-kad-dht';
+import { DualKadDHT } from './dual-kad-dht.js';
 import type { Selectors, Validators } from '@libp2p/interfaces/dht';
 export interface KadDHTInit {
     /**
