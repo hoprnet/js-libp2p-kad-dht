@@ -1,5 +1,5 @@
 import { KadDHT as SingleKadDHT } from './kad-dht.js'
-import { DualKadDHT } from './dual-kad-dht.js'
+import { DualKadDHT } from './dual-kad-dht'
 import type { Selectors, Validators } from '@libp2p/interfaces/dht'
 
 export interface KadDHTInit {
@@ -57,7 +57,6 @@ export class KadDHT extends DualKadDHT {
     new SingleKadDHT({
       protocolPrefix: '/ipfs',
       ...init,
-      clientMode: false,
       lan: true
     }))
   }

@@ -74,7 +74,7 @@ export declare class KadDHT extends EventEmitter<PeerDiscoveryEvents> implements
     /**
      * Store the given key/value pair in the DHT
      */
-    put(key: Uint8Array, value: Uint8Array, options?: QueryOptions): AsyncGenerator<import("@libp2p/interfaces/dht").DialingPeerEvent | import("@libp2p/interfaces/dht").SendingQueryEvent | import("@libp2p/interfaces/dht").PeerResponseEvent | import("@libp2p/interfaces/dht").QueryErrorEvent | import("@libp2p/interfaces/dht").ValueEvent | import("@libp2p/interfaces/dht").ProviderEvent | import("@libp2p/interfaces/dht").AddingPeerEvent, void, undefined>;
+    put(key: Uint8Array, value: Uint8Array, options?: QueryOptions): AsyncGenerator<import("@libp2p/interfaces/dht").SendingQueryEvent | import("@libp2p/interfaces/dht").PeerResponseEvent | import("@libp2p/interfaces/dht").QueryErrorEvent | import("@libp2p/interfaces/dht").ProviderEvent | import("@libp2p/interfaces/dht").ValueEvent | import("@libp2p/interfaces/dht").AddingPeerEvent | import("@libp2p/interfaces/dht").DialingPeerEvent, void, undefined>;
     /**
      * Get the value that corresponds to the passed key
      */
@@ -82,7 +82,7 @@ export declare class KadDHT extends EventEmitter<PeerDiscoveryEvents> implements
     /**
      * Announce to the network that we can provide given key's value
      */
-    provide(key: CID, options?: QueryOptions): AsyncGenerator<import("@libp2p/interfaces/dht").DialingPeerEvent | import("@libp2p/interfaces/dht").SendingQueryEvent | import("@libp2p/interfaces/dht").PeerResponseEvent | import("@libp2p/interfaces/dht").QueryErrorEvent | import("@libp2p/interfaces/dht").ValueEvent | import("@libp2p/interfaces/dht").ProviderEvent | import("@libp2p/interfaces/dht").AddingPeerEvent, void, undefined>;
+    provide(key: CID, options?: QueryOptions): AsyncGenerator<import("@libp2p/interfaces/dht").SendingQueryEvent | import("@libp2p/interfaces/dht").PeerResponseEvent | import("@libp2p/interfaces/dht").QueryErrorEvent | import("@libp2p/interfaces/dht").ProviderEvent | import("@libp2p/interfaces/dht").ValueEvent | import("@libp2p/interfaces/dht").AddingPeerEvent | import("@libp2p/interfaces/dht").DialingPeerEvent, void, undefined>;
     /**
      * Search the dht for providers of the given CID
      */

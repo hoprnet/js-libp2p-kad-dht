@@ -1,4 +1,4 @@
-import { KadDHT as SingleKadDHT } from './kad-dht.js';
+import { DualKadDHT } from './dual-kad-dht';
 import type { Selectors, Validators } from '@libp2p/interfaces/dht';
 export interface KadDHTInit {
     /**
@@ -37,5 +37,7 @@ export interface KadDHTInit {
      */
     pingConcurrency?: number;
 }
-export { SingleKadDHT as KadDHT };
+export declare class KadDHT extends DualKadDHT {
+    constructor(init?: KadDHTInit);
+}
 //# sourceMappingURL=index.d.ts.map
