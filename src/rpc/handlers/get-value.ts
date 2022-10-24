@@ -48,6 +48,7 @@ export class GetValueHandler implements DHTMessageHandler, Initializable {
       let pubKey: Uint8Array | undefined
 
       try {
+        // @ts-ignore
         const key = await this.components.getPeerStore().keyBook.get(idFromKey)
 
         if (key == null) {

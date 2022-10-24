@@ -209,6 +209,7 @@ export class Providers implements Startable, Initializable {
    * Get a list of providers for the given CID
    */
   async getProviders (cid: CID): Promise<PeerId[]> {
+    // @ts-ignore
     return await this.syncQueue.add(async () => {
       log('get providers for %s', cid)
       const provs = await this._getProvidersMap(cid)

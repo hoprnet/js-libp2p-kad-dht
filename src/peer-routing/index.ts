@@ -116,6 +116,7 @@ export class PeerRouting implements Initializable {
         const recPeer = await peerIdFromKeys(keys.marshalPublicKey({ bytes: event.record.value }))
 
         // compare hashes of the pub key
+        // @ts-ignore
         if (!recPeer.equals(peer)) {
           throw errcode(new Error('public key does not match id'), 'ERR_PUBLIC_KEY_DOES_NOT_MATCH_ID')
         }

@@ -75,7 +75,9 @@ export class Message {
     const dec = PBMessage.decode(raw)
 
     const msg = new Message(dec.type ?? PBMessage.MessageType.PUT_VALUE, dec.key ?? Uint8Array.from([]), dec.clusterLevelRaw ?? 0)
+    // @ts-ignore
     msg.closerPeers = dec.closerPeers.map(fromPbPeer)
+    // @ts-ignore
     msg.providerPeers = dec.providerPeers.map(fromPbPeer)
 
     if (dec.record?.length != null) {
